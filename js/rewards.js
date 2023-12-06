@@ -33,7 +33,7 @@ function loadData() {
   var dataSet = "";
   var dataSrc = [];
   dbGiftRewards
-  .where('StatusSend','==',1)
+  .where('StatusSend','!=',0)
   .orderBy('giftcode','asc')
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
