@@ -1,0 +1,267 @@
+<!-- https://guru.sanook.com/4405/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>LINE Retail Society</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicom.ico" rel="icon">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!--<link href="assets/css/ttb.css" rel="stylesheet">-->
+  <link href="assets/css/css.css" rel="stylesheet">
+  <link href="assets/css/w3.css" rel="stylesheet">
+  <link href="assets/css/moon.css" rel="stylesheet">
+  <!--
+  <link href="assets/css/hand.css" rel="stylesheet">
+-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.12.0/sdk.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <script type="text/javascript">
+      var speed=60; // lower number for faster
+      var flakes=100; // number of flakes
+      var colour="#fff"; // colour of flakes
+      var slush=20; // set to '0' for no slush or otherwise set to height at which slush melts
+      var flks=new Array();
+      var flkx=new Array();
+      var flky=new Array();
+      var fldy=new Array();
+      var slss=new Array();
+      var slsh=new Array();
+      var swide, shigh, boddie;
+      window.onload=function() { if (document.getElementById) {
+        boddie=document.createElement("div");
+        boddie.style.position="fixed";
+        boddie.style.top="0px";
+        boddie.style.left="0px";
+        boddie.style.width="1px";
+        boddie.style.height="1px";
+        boddie.style.overflow="visible";
+        boddie.style.backgroundColor="transparent";
+        document.body.appendChild(boddie);
+        set_width();
+        for (var i=0; i<flakes; i++) {
+          flks[i]=createDiv(3, 3, colour);
+          flkx[i]=3*Math.floor(Math.random()*swide/3);
+          flky[i]=Math.floor(Math.random()*shigh);
+          fldy[i]=2+Math.floor(Math.random()*4);
+          flks[i].style.left=flkx[i]+"px";
+          flks[i].style.top=flky[i]+"px";
+          boddie.appendChild(flks[i]);
+        }
+        setInterval("let_it_snow()", speed);
+      }}
+      function createDiv(height, width, colour) {
+        var div=document.createElement("div");
+        div.style.position="absolute";
+        div.style.height=height+"px";
+        div.style.width=width+"px";
+        div.style.overflow="hidden";
+        div.style.backgroundColor=colour;
+        return (div);
+      }
+      window.onresize=set_width;
+      function set_width() {
+        var sw_min=999999;
+        var sh_min=999999;
+        if (document.documentElement && document.documentElement.clientWidth) {
+          if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+          if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+        }
+        if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+          if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+          if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+        }
+        if (document.body.clientWidth) {
+          if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+          if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+        }
+        if (sw_min==999999 || sh_min==999999) {
+          sw_min=800;
+          sh_min=600;
+        }
+        swide=sw_min-3;
+        shigh=sh_min+400;
+        if (slush) {
+          if (swide/3>slss.length) for (i=slss.length; i<swide/3; i++) {
+            if (!slsh[i]) slsh[i]=3;
+            slss[i]=createDiv(slsh[i], 3, colour);
+            boddie.appendChild(slss[i]);
+          }
+          for (i=0; i<swide/3; i++) {
+            slss[i].style.height=slsh[i]+"px";
+            slss[i].style.top=shigh-slsh[i]+"px";
+            slss[i].style.left=3*i+"px";
+          }
+          if (i<slss.length && slss[i].style.left!="-3px") for (; i<slss.length; i++) slss[i].style.left="-3px";
+        }
+      }
+      function let_it_snow(c) {
+        var i, x, o=0, z=0;
+        for (i=0; i<flakes; i++) {
+          flky[i]+=fldy[i];
+       x=Math.floor(flkx[i]/3);
+          if (slush) {
+            o+=slsh[x];
+            if (flky[i]>=shigh-slsh[x]) {
+              if (x<swide && slsh[x]>slsh[x+1]+3) x++;
+              else if (x>0 && slsh[x]>slsh[x-1]+3) x--;
+              slss[x].style.top=shigh-(slsh[x]+=3)+"px";
+              slss[x].style.height=slsh[x]+"px";
+        flky[i]=shigh;
+         }
+          }
+          if (flky[i]>=shigh || flkx[i]>swide) {
+         flky[i]=0;
+         fldy[i]=2+Math.floor(Math.random()*4);
+         flkx[i]=3*Math.floor(Math.random()*swide/3);
+         flks[i].style.left=flkx[i]+"px";
+         z++;
+       }
+       flks[i].style.top=flky[i]+"px";
+        }
+        if (o>flakes*slush) for (i=0; i<slsh.length; i++) if (slsh[i]>3) slsh[i]--;
+        if (z || o>flakes*slush) set_width();
+      }
+  </script>
+</head>
+
+<body class="body1" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: #e3f1f9; height: 100vh; overflow: hidden;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <audio id="myaudio" controls autoplay loop style="display: none;">
+    <source src="./mp3/we-wish-you-a-merry-christmas.mp3" type="audio/mpeg">
+    <source src="./mp3/we-wish-you-a-merry-christmas.mp3">
+  </audio>
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo mr-auto"><a href="index.html"><span>LINE</span> Retail Society</a></h1>
+    </div>
+  </header>
+  <div id="isLoggedIn" style="color:#fff;"></div>
+
+
+  <main id="main">
+    <div class="container" style="text-align: center; height: 100%;">
+      <div style="height:85vh;">
+        <div id="NoService" style="display: none;background: #35dc3d; opacity: 1; border-radius: 15px; width:90%; margin:200px auto 20px auto;">
+          <div style="padding-top:20px;"><img src="img/stop.png" style="width:180px;padding-bottom: 15px;"></div>
+          <div class="btn-t8" style="color:#fff; padding-bottom: 20px; font-size: 13px; font-weight:400;"><b>คุณไม่ได้รับสิทธิ์ในการเข้าถึงข้อมูลนี้<br>กรุณาบอกเราว่าคุณมีความจำเป็นอย่างไร</b><br>
+            <a href="mailto:suvit.cha@ttbbank.com" style="text-decoration: none;"><div class="btn-3">แจ้งเหตุผลเข้าใช้ระบบงาน</div></a>
+          </div>
+        </div>
+      </div>
+      <div style="height:13vh;">
+        <div id="loading">
+          <div><img src="./img/loading1.gif" style="width:50px; margin-top:20px;"></div>
+        </div>
+        <div class="clr"></div>
+        <div id="OldSurvey" class="btn-menu" style="width:270px; margin:auto; height:75px; display:none;" onclick="window.location.href='game.html';">
+          <div style="width:23%; float: left;"><img src="./img/icon-box.png" style="width:50px"></div>
+          <div style="width:77%; float: left;padding-top:5px;">คลิก... กิจกรรมลุ้นรับ<br>ของขวัญวันคริสมาส</div>
+        </div>
+        <div class="clr"></div>
+        <div id="NewMember" style="display: none;">
+          <div class="btn-3" onclick="window.location.href='https://liff.line.me/1656865573-KOjVVJOk';">คลิกเพื่อลงทะเบียนกิจกรรม</div>
+          <div class="btn-t8" style="color:#000; font-size: 13px; margin-top:6px;"><b>ขอให้ทำการลงทะเบียนกิจกรรมก่อนนะครับ</b><div>
+        </div>
+
+      </div>
+    </div>
+
+
+<!--
+    <div class="container" style="text-align: center;margin:100px auto 30px auto;">
+      <div id="loading" style="margin-top:300px;">
+        <div><img src="./img/loading1.gif" style="width:50px; margin-top:40px;"></div>
+      </div>
+
+      <div id="NoService" style="display: none;margin-top:200px;">
+        <div><img src="img/stop.png" style="width:180px;padding-top:70px; padding-bottom: 15px;"></div>
+        <div class="btn-t8" style="color:#fff;"><b>คุณไม่ได้รับสิทธิ์ในการเข้าถึงข้อมูลนี้<br>กรุณาบอกเราว่าคุณมีความจำเป็นอย่างไร</b><br>
+          <a href="mailto:suvit.cha@ttbbank.com" style="text-decoration: none;"><div class="btn-3">แจ้งเหตุผลเข้าใช้ระบบงาน</div></a>
+        </div>
+      </div>
+
+      <div id="OldSurvey" style="display: none;">
+        <div style="margin:auto; height: 100%; max-height: 900px;">
+          <center>
+            <img src="./img/pic-01.png" class="btn-menu" onclick="window.location.href='game.html';" style=" top: 95%; background: #00a53c;">
+          </center>
+        </div>
+        <div class="clr"></div>
+      </div>
+
+      <div id="ShowRewards" style="display: none;margin-top:200px;">
+        <div style="margin-top:50px; color:#fff; font-size: 14px; margin-bottom: 15px;"><b>LINE Retail Society</b><BR>ชวนคุณร่วมส่งความสุขและลุ้นรางวัล</div>
+        <div style="margin:auto;">
+          <center>
+            <img src="./img/pic-01.png" class="btn-menu" onclick="window.location.href='game.html';" style="background: #00a53c;">
+            <img src="./img/pic-02.png" class="btn-menu" onclick="window.location.href='home.html';" style="margin-right:6px; background: #e30000;">
+          </center>
+        </div>
+        <div class="clr"></div>
+      </div>
+
+      <div id="NewMember" style="display: none;margin-top:200px;">
+        <div><img src="img/register.png" style="width:180px;padding-top:4px; padding-bottom: 15px;"></div>
+        <div class="btn-t8" style="color:#fff;"><b>คุณยังไม่เคยลงทะเบียนกับ LINE Retail Society<br>ขอให้ทำการลงทะเบียนก่อนเริ่มต้นใช้งาน</b><div>
+        <div class="btn-3" onclick="window.location.href='https://liff.line.me/1655966947-KxrAqdyp';">ลงทะเบียนเพื่อเริ่มต้นใช้งาน</div>
+      </div>
+    </div>
+-->
+  </main>
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="background: #28a745; max-width:450px;">
+      <div class="w3-container" style="width:100%;margin:auto;min-height: 350px; padding-bottom: 30px;">
+        <center>
+          <div class="btn-t33" style="margin-top:30px; font-weight: 600; background: #46d767; color:#fff; font-size:14px;">ข้อความแจ้งเตือน</div>
+          <div>
+            <div><img src="./img/register.png" style="margin:15px auto; width:200px;"></div>
+            <div style="font-size: 13px; font-weight: 600;">คุณยังไม่ได้ทำการลงทะเบียนกิจกรรม<br>กรุณาลงทะเบียนก่อนร่วมลุ้นของขวัญปีใหม่</div>
+          </div>
+          <div class="clr"></div>
+          <div class="btn-2" onclick="window.location.href='https://liff.line.me/1656865573-KOjVVJOk';">คลิกเพื่อลงทะเบียน</div>
+          <!--<div class="btn-1" onclick="CloseAll()" style="background: #da0015;">คลิกเพื่อลงทะเบียนร่วมงาน</div>
+          <div id="overlay" class="btn-t22" onclick="CloseAll()" style="margin-top:10px; width:120px;">ปิดหน้าต่างนี้</div>-->
+        </center>
+      </div>
+    </div>
+    <div class="clr" style="height:50px;"></div>
+  </div>
+  <div id="id02" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="background: #f68b1f;">
+      <div class="w3-container" style="width:100%;margin:auto;min-height: 350px; padding-bottom: 30px;">
+        <center>
+          <div class="btn-t33" style="margin-top:30px; font-weight: 600; background: #c96501; color:#fff; font-size:14px;">ข้อความแจ้งเตือน</div>
+          <div>
+            <div><img src="./img/stop.png" style="margin:15px auto; width:200px;"></div>
+            <div style="font-size: 13px; font-weight: 600;">คุณไม่ได้รับสิทธิ์ในการเข้าร่วมกิจกรรมนี้</div>
+          </div>
+          <div class="clr" style="height: 10px;"></div>
+          <!--<div class="btn-2" onclick="window.location.href='https://liff.line.me/1656865573-KOjVVJOk';">คลิกเพื่อลงทะเบียน</div>
+          <div class="btn-1" onclick="CloseAll()" style="background: #da0015;">คลิกเพื่อลงทะเบียนร่วมงาน</div>-->
+          <div id="overlay" class="btn-t22" onclick="CloseAll()" style="margin-top:10px; width:120px;">ปิดหน้าต่างนี้</div>
+        </center>
+      </div>
+    </div>
+    <div class="clr" style="height:50px;"></div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

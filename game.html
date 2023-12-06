@@ -1,0 +1,320 @@
+<!-- https://guru.sanook.com/4405/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>LINE Retail Society</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/img/favicom.ico" rel="icon">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/hand.css" rel="stylesheet">
+  <!--<link href="assets/css/ttb.css" rel="stylesheet">-->
+  <link href="assets/css/css.css" rel="stylesheet">
+  <link href="assets/css/w3.css" rel="stylesheet">
+  <link href="assets/css/moon.css" rel="stylesheet">
+  <link href="assets/css/random.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <script type="text/javascript">
+      var speed=60; // lower number for faster
+      var flakes=100; // number of flakes
+      var colour="#fff"; // colour of flakes
+      var slush=20; // set to '0' for no slush or otherwise set to height at which slush melts
+      var flks=new Array();
+      var flkx=new Array();
+      var flky=new Array();
+      var fldy=new Array();
+      var slss=new Array();
+      var slsh=new Array();
+      var swide, shigh, boddie;
+      window.onload=function() { if (document.getElementById) {
+        boddie=document.createElement("div");
+        boddie.style.position="fixed";
+        boddie.style.top="0px";
+        boddie.style.left="0px";
+        boddie.style.width="1px";
+        boddie.style.height="1px";
+        boddie.style.overflow="visible";
+        boddie.style.backgroundColor="transparent";
+        document.body.appendChild(boddie);
+        set_width();
+        for (var i=0; i<flakes; i++) {
+          flks[i]=createDiv(3, 3, colour);
+          flkx[i]=3*Math.floor(Math.random()*swide/3);
+          flky[i]=Math.floor(Math.random()*shigh);
+          fldy[i]=2+Math.floor(Math.random()*4);
+          flks[i].style.left=flkx[i]+"px";
+          flks[i].style.top=flky[i]+"px";
+          boddie.appendChild(flks[i]);
+        }
+        setInterval("let_it_snow()", speed);
+      }}
+      function createDiv(height, width, colour) {
+        var div=document.createElement("div");
+        div.style.position="absolute";
+        div.style.height=height+"px";
+        div.style.width=width+"px";
+        div.style.overflow="hidden";
+        div.style.backgroundColor=colour;
+        return (div);
+      }
+      window.onresize=set_width;
+      function set_width() {
+        var sw_min=999999;
+        var sh_min=999999;
+        if (document.documentElement && document.documentElement.clientWidth) {
+          if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+          if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+        }
+        if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+          if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+          if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+        }
+        if (document.body.clientWidth) {
+          if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+          if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+        }
+        if (sw_min==999999 || sh_min==999999) {
+          sw_min=800;
+          sh_min=600;
+        }
+        swide=sw_min-3;
+        shigh=sh_min+400;
+        if (slush) {
+          if (swide/3>slss.length) for (i=slss.length; i<swide/3; i++) {
+            if (!slsh[i]) slsh[i]=3;
+            slss[i]=createDiv(slsh[i], 3, colour);
+            boddie.appendChild(slss[i]);
+          }
+          for (i=0; i<swide/3; i++) {
+            slss[i].style.height=slsh[i]+"px";
+            slss[i].style.top=shigh-slsh[i]+"px";
+            slss[i].style.left=3*i+"px";
+          }
+          if (i<slss.length && slss[i].style.left!="-3px") for (; i<slss.length; i++) slss[i].style.left="-3px";
+        }
+      }
+      function let_it_snow(c) {
+        var i, x, o=0, z=0;
+        for (i=0; i<flakes; i++) {
+          flky[i]+=fldy[i];
+       x=Math.floor(flkx[i]/3);
+          if (slush) {
+            o+=slsh[x];
+            if (flky[i]>=shigh-slsh[x]) {
+              if (x<swide && slsh[x]>slsh[x+1]+3) x++;
+              else if (x>0 && slsh[x]>slsh[x-1]+3) x--;
+              slss[x].style.top=shigh-(slsh[x]+=3)+"px";
+              slss[x].style.height=slsh[x]+"px";
+        flky[i]=shigh;
+         }
+          }
+          if (flky[i]>=shigh || flkx[i]>swide) {
+         flky[i]=0;
+         fldy[i]=2+Math.floor(Math.random()*4);
+         flkx[i]=3*Math.floor(Math.random()*swide/3);
+         flks[i].style.left=flkx[i]+"px";
+         z++;
+       }
+       flks[i].style.top=flky[i]+"px";
+        }
+        if (o>flakes*slush) for (i=0; i<slsh.length; i++) if (slsh[i]>3) slsh[i]--;
+        if (z || o>flakes*slush) set_width();
+      }
+  </script>
+  <style type="text/css">
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #dde3e8;
+    }
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even){background-color: #f2f2f2}
+    th {
+        background-color: #0056ff;
+        color: white; text-align: center;
+    }  
+  </style>
+</head>
+
+<body class="body2" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: #e3f1f9;height: 100%;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <audio id="myaudio1" controls autoplay loop style="display: none;">
+    <source src="./mp3/we-wish-you-a-merry-christmas.mp3" type="audio/mpeg">
+    <source src="./mp3/we-wish-you-a-merry-christmas.mp3">
+  </audio>
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo mr-auto"><a href="index.html"><span>LINE</span> Retail Society</a></h1>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container" style="text-align: center;margin:100px auto 30px auto;">
+      <center>
+        <div><img src="./img/bg-header.png" style="width:150px;"></div>
+        <!--<div><img src="./img/bg-newyear2024.png" style="width:80px; margin-top:12px;"></div>-->
+        <div id="loading" style="margin:120px auto;"><img src="./img/loading1.gif" style="width:50px;"></div>
+      </center>
+
+    <div style="max-width: 400px; width:100%; margin:auto;">
+      <div id="StartGame" style="width:100%; display: none;">
+        <div id="ShowWheel" class="wheelmap" style="margin-top: -170px;">
+          <canvas id="wheel"></canvas>
+          <button id="spin-btn">Start</button>
+          <img src="spinner-arrow-.svg" alt="spinner-arrow" class="A-img"/>
+        </div>
+        <div id="final-value" style="margin-top: 330px;">
+          <center>
+          <p class="boxtext">
+            <b>คลิก Start เพื่อหมุนวงล้อ</b><br>คุณสามารถหมุนวงล้อได้เพียง 1 ครั้ง
+          </p>
+          </center>
+          <div class="btn-t2" style="margin-top:20px;background: #0056ff; border:2px solid #fff; color:#fff; margin-right: 3px;" onclick="Opengift()">ดูรายการของรางวัล</div>
+          <div class="btn-t2" style="margin-top:20px;background: #0056ff; border:2px solid #fff; color:#fff;" onclick="OpenRewards()">รายชื่อผู้ได้รับรางวัล</div>
+        </div>      
+      </div>
+
+      <div id="ShowWheel1" style="display: none;">
+        <div id="DisplayGift"></div>
+      </div>
+    </div>
+
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="max-width: 450px;">
+      <div class="w3-container" style="min-height:300px;padding:5px;width:100%;text-align:center;background:#cb0808;border-radius: 20px; max-width: ;">
+          <div style="margin-top:25px; margin-bottom: 10px;"><img src="./img/bg-header.png" style="width:150px;"></div>
+          <div id="ShowMoonCake"></div>
+          <div style="padding:10px;"><img src="./img/santaclaus.png" style="width:90%" class="hand"></div>
+          <div style="font-weight: 600; color:#fff; font-size: 14px; padding-top:5px;">คุณมี 1 สิทธิ์ในการลุ้นรางวัล</div>
+          <div style="font-weight: 600; color:#000000; font-size: 13px; line-height: 1.3; padding-top:10px;">คุณสามารถหมุนวงล้อได้เพียง 1 ครั้ง</div>
+          <div class="btn-t2" id="video1" onclick="Song1()" style="margin:15px auto 15px auto;">ไปหมุนวงล้อกันดีกว่า</div>
+          <div class="clr" style="height: 10px;"></div>
+      </div>
+    </div>
+    <div class="clr" style="height: 50px;"></div>
+  </div>
+
+
+  <div id="id02" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="max-width: 450px;">
+      <div class="w3-container" style="min-height:300px;padding:5px;width:100%;text-align:center;background:#10b236;border-radius: 20px;">
+        <div id="DisplayGiftRewards"></div>
+        <div class="btn-t2" style="margin:20px auto;" onclick="CloseAll()">ปิดหน้าต่างนี้</div>
+      </div>
+    </div>
+    <div class="clr" style="height: 50px;"></div>
+  </div>
+
+
+  <div id="id03" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="max-width: 450px;">
+      <div class="w3-container" style="min-height:300px;padding:5px;width:100%;text-align:center;background:#f68b1f;border-radius: 20px;">
+        <div class="btn-1" style="margin-top:25px; margin-bottom: 15px; background: #db7107;">รายการของรางวัล</div>
+        <table>
+          <tr>
+            <th style="width:8%;">No</th>
+            <th style="width:35%;">รูปของรางวัล</th>
+            <th style="width:57%;">ของรางวัล</th>
+          </tr>
+          <tr>
+            <td style="text-align: center;font-weight: 600;">1</td>
+            <td style="text-align: center;"><img src="./img/gift-01.png" style="width:80px;"/></td>
+            <td><b>บัตรกำนัล Lotus</b><br>มูลค่า 100 บาท<br>จำนวน 20 รายการ</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;font-weight: 600;">2</td>
+            <td style="text-align: center;"><img src="./img/gift-02.png" style="width:80px;"/></td>
+            <td><b>บัตรกำนัล Pizza</b><br>มูลค่า 100 บาท<br>จำนวน 20 รายการ</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;font-weight: 600;">3</td>
+            <td style="text-align: center;"><img src="./img/gift-03.png" style="width:80px;"/></td>
+            <td><b>กระเป๋ากระสอบใหญ่</b><br>จำนวน 40 รายการ</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;font-weight: 600;">4</td>
+            <td style="text-align: center;"><img src="./img/gift-04.png" style="width:80px;"/></td>
+            <td><b>กระเป๋าส้มฟ้า</b><br>จำนวน 50 รายการ</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;font-weight: 600;">5</td>
+            <td style="text-align: center;"><img src="./img/gift-05.png" style="width:80px;"/></td>
+            <td><b>แก้วน้ำอีเกีย</b><br>จำนวน 40 รายการ</td>
+          </tr>
+        </table>
+        <div class="btn-t2" style="margin:20px auto;" onclick="CloseAll()">ปิดหน้าต่างนี้</div>
+      </div>
+    </div>
+    <div class="clr" style="height: 50px;"></div>
+  </div>
+
+
+  <div id="id04" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="max-width: 450px;">
+      <div class="w3-container" style="min-height:300px;padding:5px;width:100%;text-align:center;background:#007bff;border-radius: 20px;">
+        <div class="btn-1" style="margin-top:25px; margin-bottom: 15px;">มีบางอย่างผิดพลาด</div>
+        <div style="margin:20px auto;"><img src="./img/stop.png" style="width:220px;"/></div>
+        <div style="color:#fff;font-size: 13px;">มีบางอย่างผิดพลาด<br><b>กดปิดหน้าต่างเพื่อทำการตรวจสอบอีกครั้ง</b></font></div>
+        <div class="btn-t2" style="margin:20px auto;" onclick="OpenReload()">ปิดหน้าต่างนี้</div>
+      </div>
+    </div>
+    <div class="clr" style="height: 50px;"></div>
+  </div>
+
+
+
+  <div id="id05" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="max-width: 450px;">
+      <div class="w3-container" style="min-height:300px;padding:5px;width:100%;text-align:center;background:#007bff;border-radius: 20px;">
+        <div id="DisplayConfirmGift"></div>
+        <!--
+        <div class="btn-1" style="margin-top:25px; margin-bottom: 15px;">ยืนยันการรับรางวัล</div>
+        <div style="margin:20px auto;"><img src="./img/stop.png" style="width:220px;"/></div>
+        <div style="color:#fff;font-size: 13px;">หากท่านได้ทำการรับรางวัลเรียบร้อยแล้ว<br><b>ให้ทำการกดยืนยันการรับรางวัลด้านล่าง</b></font></div>
+        <div class="btn-t2" style="margin:20px auto; background: #dc3545; color:#fff; margin-right:5px;" onclick="GiftConfirm()">ยืนยันการรับรางวัลแล้ว</div>
+        <div class="btn-t2" style="margin:20px auto; background: #28a745; color:#fff;" onclick="CloseAll()">ยังไม่รับตอนนี้</div>
+        -->
+      </div>
+    </div>
+    <div class="clr" style="height: 50px;"></div>
+  </div>
+
+  <div id="menu" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4 bg-menu">
+      <div class="w3-container" style="min-height:300px;width:100%;text-align:center;padding:0px;margin-bottom: 20px;background-color: #a3cefd;">
+        <div id="MenuSociety"></div>
+      </div>
+    </div>
+    <div class="clr" style="height:50px;"></div>
+  </div>
+
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+  <script src="./js/connect.js"></script>
+  <script src="./js/game.js"></script>
+</body>
+</html>

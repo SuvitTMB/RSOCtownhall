@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>LINE Retail Society</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- Favicons -->
+  <link href="assets/img/favicom.ico" rel="icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/button.css" rel="stylesheet">
+  <link href="assets/css/css.css" rel="stylesheet">
+  <link href="assets/css/w3.css" rel="stylesheet">
+  <link href="assets/css/moon.css" rel="stylesheet">
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css'>
+  <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css'>
+
+
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.12.0/sdk.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <style type="text/css">
+    @media (min-width: 768px) { margin-left:0px; }
+    .form-control { 
+      text-align: left; font-size: 400 !important; font-size: 13px !important; color:#0056ff;
+      background-color: #f2f4f6;
+    }
+    label { 
+      color: #fff; font-weight: 600;
+    }
+    button, input, select, textarea, optgroup { 
+      padding:2px; background:#ffd2d2;
+    }
+    .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+      color:#fff;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active { color:#fff !important; }
+    .table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #002d63;
+    }
+  </style>
+</head>
+
+<body style="background-color: #349dcf;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!--
+  <div class="navbar1" style="background: #ffd2d2;">
+    <div style="background: #003cb2; height: 75px;border-top: 1px solid #fff;">
+      <div style="max-width: 400px; margin:auto; text-align: center;">
+        <div class="iconlink" onClick="window.location='home.html';">
+          <div><img src="./img/icon-thong.png" style="width:25px;"></div>
+          <div style="font-size: 11px;">หน้าแรก</div>
+        </div>
+        <div class="iconlink" onClick="window.location='game.html';">
+          <div><img src="./img/icon-online.png" style="width:25px;"></div>
+          <div style="font-size: 11px;">ลุ้นโชค</div>
+        </div>
+        <div class="iconlink" onClick="window.location='history.html';">
+          <div><img src="./img/icon-history.png" style="width:25px;"></div>
+          <div style="font-size: 11px;">ประวัติ</div>
+        </div>
+        <div class="iconlink" onClick="window.location='rewards.html';" style="background-color: #002d63;">
+          <div><img src="./img/icon-gift.png" style="width:25px;"></div>
+          <div style="font-size: 11px;">รางวัล</div>
+        </div>
+        <div class="iconlink" onClick="window.location='detail.html';">
+          <div><img src="./img/icon-detail.png" style="width:25px;"></div>
+          <div style="font-size: 11px;">รายละเอียด</div>
+        </div>
+      </div>   
+   </div>
+  </div>
+-->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo mr-auto"><a href="index.html"><span>LINE</span> Retail Society</a></h1>
+      <!--
+      <div class="mobile-nav-toggle d-lg-none" onclick="OpenPopMenu()">
+        <i class="icofont-navigation-menu"></i>
+      </div>
+      -->
+    </div>
+  </header>
+
+  <main id="detail">
+    <center>
+      <div><img src="./img/read-03.jpg" class="img-pic" style="width:100%;margin-top:50px;"></div>
+      <div class="btn-1" style="margin:35px auto 30px auto; background: #0a86c1;">รายชื่อผู้ได้รับรางวัล</div>
+    </center>
+    <div style="margin:10px auto;max-width: 400px; width:90%;">
+      <table id="ex-table" class="display" style="width:100%;font-size: 13px;color:#444444;">
+        <thead>
+          <tr>
+            <th style="width:80%;">รายชื่อผู้ได้รับรางวัล</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <center>
+    <div class="btn-t2" style="margin:20px auto;background: #0056ff; border:2px solid #fff; color:#fff;" onclick="GotoHome()">กลับหน้าแรก</div>
+    </center>
+
+    <div class="clr" style="height: 10px;"></div>
+  </main>
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+      <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+        <div class="btn-t3" style="margin-top:10px;">ผลคะแนนโหวต 6 อันดับแรกล่าสุด</div>
+        <div id="ShowTopVote"></div>
+        <div onclick="CloseAll()" class="btn-t2">ปิดหน้าต่าง</div>
+      </div>
+    </div>
+    <div class="clr" style="height: 70px;"></div>
+  </div>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files #dde7f0-->
+<script src='https://code.jquery.com/jquery-1.12.3.js'></script>
+<script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js'></script>
+<script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
+<script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js'></script>
+  <!-- Template Main JS File -->
+
+  <script src="./js/connect.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./js/rewards.js"></script>
+<!--
+-->
+</body>
+</html>
