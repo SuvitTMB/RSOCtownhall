@@ -1,1 +1,194 @@
-(function(_0x80897d,_0x3afb1c){var _0x2dd9bc=_0x4a6d,_0x599d76=_0x80897d();while(!![]){try{var _0x5b0b51=-parseInt(_0x2dd9bc(0xc1))/0x1+-parseInt(_0x2dd9bc(0xad))/0x2+-parseInt(_0x2dd9bc(0xd7))/0x3*(parseInt(_0x2dd9bc(0xc7))/0x4)+parseInt(_0x2dd9bc(0xaa))/0x5*(parseInt(_0x2dd9bc(0xbb))/0x6)+-parseInt(_0x2dd9bc(0xd5))/0x7*(parseInt(_0x2dd9bc(0xbd))/0x8)+-parseInt(_0x2dd9bc(0xcd))/0x9*(parseInt(_0x2dd9bc(0xb3))/0xa)+parseInt(_0x2dd9bc(0xc3))/0xb;if(_0x5b0b51===_0x3afb1c)break;else _0x599d76['push'](_0x599d76['shift']());}catch(_0xe2a8f7){_0x599d76['push'](_0x599d76['shift']());}}}(_0xb190,0x4c5d3));function _0x4a6d(_0x450fa0,_0x55a9c4){var _0xb1905=_0xb190();return _0x4a6d=function(_0x4a6dc8,_0x1718e3){_0x4a6dc8=_0x4a6dc8-0x94;var _0x42f11c=_0xb1905[_0x4a6dc8];return _0x42f11c;},_0x4a6d(_0x450fa0,_0x55a9c4);}var xEmpID='',CheckFound=0x0,sGroupRound='RSOCTownhall2023#2';$(document)['ready'](function(){main();});async function main(){var _0x10e339=_0x4a6d;await liff[_0x10e339(0xb2)]({'liffId':'1657509542-zx30qJxQ'}),document[_0x10e339(0x9c)](_0x10e339(0x96))[_0x10e339(0xd1)](liff[_0x10e339(0x96)]()),liff[_0x10e339(0x96)]()?getUserProfile():liff[_0x10e339(0xd0)]();}async function getUserProfile(){var _0xe8ae59=_0x4a6d,_0x23d70b='';const _0x882966=await liff['getProfile']();sessionStorage['setItem'](_0xe8ae59(0xa8),_0x882966[_0xe8ae59(0x9e)]),sessionStorage[_0xe8ae59(0xb7)](_0xe8ae59(0xd3),_0x882966[_0xe8ae59(0xaf)]),sessionStorage[_0xe8ae59(0xb7)](_0xe8ae59(0xdb),_0x882966['pictureUrl']),_0x23d70b+=_0xe8ae59(0xa0)+sessionStorage[_0xe8ae59(0xdc)]('LinePicture')+'\x22\x20class=\x22add-profile\x22\x20width=\x22100px\x22></div>',_0x23d70b+='<div\x20class=\x22NameLine\x22>'+sessionStorage[_0xe8ae59(0xdc)](_0xe8ae59(0xd3))+_0xe8ae59(0xce),$(_0xe8ae59(0xcf))[_0xe8ae59(0xa5)](_0x23d70b),Connect_DB();}function openWindow(){var _0x3c2534=_0x4a6d;liff[_0x3c2534(0xb4)]({'url':_0x3c2534(0xa3),'external':!![]});}function Connect_DB(){var _0xa6fb4=_0x4a6d,_0x26c462={'apiKey':_0xa6fb4(0xb6),'authDomain':_0xa6fb4(0xd4),'projectId':_0xa6fb4(0xd8),'storageBucket':_0xa6fb4(0x9b),'messagingSenderId':_0xa6fb4(0xde),'appId':'1:653667385625:web:a5aed08500de80839f0588','measurementId':_0xa6fb4(0xa4)};firebase[_0xa6fb4(0xa2)](_0x26c462),dbProfile=firebase[_0xa6fb4(0xc9)]()[_0xa6fb4(0xd2)]('CheckProfile'),dbGiftRewards=firebase[_0xa6fb4(0xc9)]()['collection']('RSOCtownhall'),dbRegMember=firebase[_0xa6fb4(0xc9)]()[_0xa6fb4(0xd2)](_0xa6fb4(0x98)),CheckData();}var CheckFoundData=0x0;function _0xb190(){var _0x15ce02=['653667385625','ShowRewards','getMonth','EmpName_RSOC','CampRound','isLoggedIn','limit','BootMember','OldSurvey','statusconfirm','retailproject-6f4fc.appspot.com','getElementById','empPhone','userId','forEach','<div><img\x20src=\x22','getMinutes','initializeApp','https://line.me','G-9SKTRHHSW9','html','lineID','EmpID','LineID','EmpRefID','139955UfLVes','where','EmpAddress','889632PXXfEh','getFullYear','displayName','empName','display','init','2490050waZiPK','openWindow','length','AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE','setItem','getSeconds','style','none','12XTCpJp','doc','8FEvdom','getDate','NewMember','update','113330QfvJCt','then','23183468EwKKaH','data','EmpID_RSOC','block','1588ZoMCzL','get','firestore','EmpPhone','TimeIN','id01','18JBnwnz','</div>','#MyProfile','login','append','collection','LineName','retailproject-6f4fc.firebaseapp.com','2013606gHLDUH','empID','3831SkMpgW','retailproject-6f4fc','NoService','loading','LinePicture','getItem','id02'];_0xb190=function(){return _0x15ce02;};return _0xb190();}function CheckData(){var _0x6e4698=_0x4a6d;dbProfile[_0x6e4698(0xab)](_0x6e4698(0xa6),'==',sessionStorage[_0x6e4698(0xdc)](_0x6e4698(0xa8)))[_0x6e4698(0xc8)]()[_0x6e4698(0xc2)](_0x4f6f16=>{var _0x264f8f=_0x6e4698;_0x4f6f16[_0x264f8f(0x9f)](_0x4e94b9=>{var _0x551614=_0x264f8f;CheckFoundData=0x1,_0x4e94b9[_0x551614(0xc4)]()[_0x551614(0x9a)]==0x9?(document[_0x551614(0x9c)]('loading')[_0x551614(0xb9)][_0x551614(0xb1)]='none',document[_0x551614(0x9c)](_0x551614(0xd9))[_0x551614(0xb9)][_0x551614(0xb1)]=_0x551614(0xc6)):(xEmpID=_0x4e94b9[_0x551614(0xc4)]()[_0x551614(0xd6)],EidProfile=_0x4e94b9['id'],sessionStorage['setItem'](_0x551614(0xc5),xEmpID),sessionStorage['setItem'](_0x551614(0x94),_0x4e94b9['data']()[_0x551614(0xb0)]),sessionStorage[_0x551614(0xb7)](_0x551614(0xa9),_0x4e94b9['id']),sessionStorage[_0x551614(0xb7)](_0x551614(0xca),_0x4e94b9[_0x551614(0xc4)]()[_0x551614(0x9d)]),sessionStorage[_0x551614(0xb7)](_0x551614(0xac),_0x4e94b9[_0x551614(0xc4)]()['empAddress']),dbProfile[_0x551614(0xbc)](sessionStorage[_0x551614(0xdc)](_0x551614(0xa9)))[_0x551614(0xc0)]({'linename':sessionStorage[_0x551614(0xdc)](_0x551614(0xd3)),'empPicture':sessionStorage[_0x551614(0xdc)]('LinePicture')}),CheckRegister());}),CheckFoundData==0x0&&(document['getElementById'](_0x264f8f(0xda))['style'][_0x264f8f(0xb1)]=_0x264f8f(0xba),document[_0x264f8f(0x9c)](_0x264f8f(0xbf))[_0x264f8f(0xb9)][_0x264f8f(0xb1)]=_0x264f8f(0xc6),document[_0x264f8f(0x9c)](_0x264f8f(0xcc))['style'][_0x264f8f(0xb1)]=_0x264f8f(0xc6));});}function CheckRegister(){var _0x45e8e8=_0x4a6d,_0x1b1c40='',_0x58a0c4=0x0;dbRegMember[_0x45e8e8(0xab)](_0x45e8e8(0xa7),'==',parseInt(sessionStorage[_0x45e8e8(0xdc)](_0x45e8e8(0xc5))))[_0x45e8e8(0xab)](_0x45e8e8(0x95),'==',sGroupRound)[_0x45e8e8(0x97)](0x1)[_0x45e8e8(0xc8)]()['then'](_0x3e6866=>{var _0x531fb0=_0x45e8e8;_0x3e6866[_0x531fb0(0x9f)](_0x332e1b=>{var _0x3896fa=_0x531fb0;_0x58a0c4=0x1,_0x1b1c40=_0x332e1b['data']()[_0x3896fa(0xcb)];}),document['getElementById']('loading')['style'][_0x531fb0(0xb1)]='none';if(_0x1b1c40!=''&&_0x58a0c4==0x1)document['getElementById'](_0x531fb0(0x99))[_0x531fb0(0xb9)]['display']=_0x531fb0(0xc6);else _0x1b1c40==''&&_0x58a0c4==0x1?document['getElementById'](_0x531fb0(0xcc))[_0x531fb0(0xb9)][_0x531fb0(0xb1)]=_0x531fb0(0xc6):document[_0x531fb0(0x9c)](_0x531fb0(0xdd))[_0x531fb0(0xb9)][_0x531fb0(0xb1)]=_0x531fb0(0xc6);});}var gcheck=0x0;function CheckRewards(){var _0x163a25=_0x4a6d;dbGiftRewards[_0x163a25(0xab)](_0x163a25(0xa7),'==',sessionStorage[_0x163a25(0xdc)](_0x163a25(0xc5)))[_0x163a25(0xc8)]()[_0x163a25(0xc2)](_0x438695=>{var _0x286ccb=_0x163a25;_0x438695[_0x286ccb(0x9f)](_0x259a04=>{var _0x5d8e62=_0x286ccb;gcheck=0x1,document[_0x5d8e62(0x9c)](_0x5d8e62(0xda))[_0x5d8e62(0xb9)][_0x5d8e62(0xb1)]='none',document[_0x5d8e62(0x9c)](_0x5d8e62(0x99))[_0x5d8e62(0xb9)][_0x5d8e62(0xb1)]=_0x5d8e62(0xba),document[_0x5d8e62(0x9c)]('ShowRewards')[_0x5d8e62(0xb9)][_0x5d8e62(0xb1)]='block';}),gcheck==0x0&&(document[_0x286ccb(0x9c)](_0x286ccb(0xda))[_0x286ccb(0xb9)][_0x286ccb(0xb1)]=_0x286ccb(0xba),document[_0x286ccb(0x9c)](_0x286ccb(0x99))['style'][_0x286ccb(0xb1)]=_0x286ccb(0xc6),document[_0x286ccb(0x9c)](_0x286ccb(0xdf))[_0x286ccb(0xb9)][_0x286ccb(0xb1)]=_0x286ccb(0xba));});}function NewDate(){var _0x39ce1b=_0x4a6d,_0x12b177=new Date(),_0xc00ac5=_0x12b177[_0x39ce1b(0xbe)]()+'',_0x563a3d=_0x12b177[_0x39ce1b(0xe0)]()+0x1+'',_0x33cfb0=_0x12b177[_0x39ce1b(0xae)]()+'',_0x16b63f=_0x12b177['getHours']()+'',_0x1b5083=_0x12b177[_0x39ce1b(0xa1)]()+'',_0x2603f1=_0x12b177[_0x39ce1b(0xb8)]()+'',_0xc26a2=_0x16b63f>=0xc?'PM':'AM';_0xc00ac5=checkZero(_0xc00ac5),_0x563a3d=checkZero(_0x563a3d),_0x33cfb0=checkZero(_0x33cfb0),_0x16b63f=checkZero(_0x16b63f),_0x1b5083=checkZero(_0x1b5083),_0x2603f1=checkZero(_0x2603f1),dateString=_0xc00ac5+'/'+_0x563a3d+'/'+_0x33cfb0+'\x20'+_0x16b63f+':'+_0x1b5083+':'+_0x2603f1+'\x20'+_0xc26a2;}function checkZero(_0x2110a8){var _0x4eff9b=_0x4a6d;return _0x2110a8[_0x4eff9b(0xb5)]==0x1&&(_0x2110a8='0'+_0x2110a8),_0x2110a8;}function ClickBox(){var _0x553a4d=_0x4a6d;document['getElementById'](_0x553a4d(0xcc))[_0x553a4d(0xb9)]['display']='block';}function CloseAll(){var _0x4322d1=_0x4a6d;document[_0x4322d1(0x9c)](_0x4322d1(0xcc))[_0x4322d1(0xb9)]['display']=_0x4322d1(0xba),document['getElementById']('id02')[_0x4322d1(0xb9)]['display']=_0x4322d1(0xba);}
+var xEmpID = "";
+var CheckFound = 0;
+//var sStatusOrder = 0;
+var sGroupRound = "RSOCTownhall2023#2";
+//var sGroupRound = "NaNForum#1";
+
+
+$(document).ready(function () {
+/*
+  sessionStorage.clear(); 
+  var str = "";
+  var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
+  var sLineName = "Website";
+  var sLinePicture = "https://profile.line-scdn.net/0hoLlg-mNNMGNRHiaTpMdPNG1bPg4mMDYrKX8qVnIYOgYpe3QwbCp2AXVKaVN_fnMzOC16V3NMagF8";
+  sessionStorage.setItem("LineID", sLineID);
+  sessionStorage.setItem("LineName", sLineName);
+  sessionStorage.setItem("LinePicture", sLinePicture);
+  str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile" width="100px"></div>';
+  str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
+  $("#MyProfile").html(str);  
+  Connect_DB();
+*/   
+ 
+  main();
+});
+
+
+async function main() {
+  await liff.init({ liffId: "1657509542-zx30qJxQ" });
+  document.getElementById("isLoggedIn").append(liff.isLoggedIn());
+  if(liff.isLoggedIn()) {
+    getUserProfile();
+  } else {
+    liff.login();
+  }
+}
+
+
+async function getUserProfile() {
+  var str = "";
+  const profile = await liff.getProfile();
+  sessionStorage.setItem("LineID", profile.userId);
+  sessionStorage.setItem("LineName", profile.displayName);
+  sessionStorage.setItem("LinePicture", profile.pictureUrl);
+  str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile" width="100px"></div>';
+  str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
+  $("#MyProfile").html(str);  
+  Connect_DB();
+}
+
+
+function openWindow() {
+  liff.openWindow({
+    url: "https://line.me",
+    external: true     
+  })
+}
+
+
+function Connect_DB() {
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
+    authDomain: "retailproject-6f4fc.firebaseapp.com",
+    projectId: "retailproject-6f4fc",
+    storageBucket: "retailproject-6f4fc.appspot.com",
+    messagingSenderId: "653667385625",
+    appId: "1:653667385625:web:a5aed08500de80839f0588",
+    measurementId: "G-9SKTRHHSW9"
+  };
+  firebase.initializeApp(firebaseConfig);
+  dbProfile = firebase.firestore().collection("CheckProfile");
+  dbGiftRewards = firebase.firestore().collection("RSOCtownhall");
+  dbRegMember = firebase.firestore().collection("BootMember");
+  CheckData();
+  //CheckRegister();
+}
+
+
+var CheckFoundData = 0;
+function CheckData() {
+  dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      CheckFoundData = 1;
+      if(doc.data().statusconfirm==9) {
+        document.getElementById('loading').style.display='none';
+        document.getElementById('NoService').style.display='block';
+      } else {
+        EidProfile = doc.id;
+        sessionStorage.setItem("EmpID_RSOC", doc.data().empID);
+        sessionStorage.setItem("EmpName_RSOC", doc.data().empName);
+        sessionStorage.setItem("EmpRefID", doc.id);
+        sessionStorage.setItem("EmpPhone", doc.data().empPhone);
+        sessionStorage.setItem("EmpAddress", doc.data().empAddress);
+        CheckRegister();
+      }
+    });
+    if(CheckFoundData==0) {
+      document.getElementById('loading').style.display='none';
+      document.getElementById('NewMember').style.display='block';
+      document.getElementById('id01').style.display='block';
+      //location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
+    }
+  });
+}
+
+
+function UpdateProfile() {
+  dbProfile.doc(sessionStorage.getItem("EmpRefID")).update({
+    linename : sessionStorage.getItem("LineName"),
+    empPicture : sessionStorage.getItem("LinePicture")
+  });
+
+}
+
+
+function CheckRegister() {
+  UpdateProfile();
+  var xTime = "";
+  var xCheck = 0;
+  dbRegMember.where('EmpID','==', parseInt(sessionStorage.getItem("EmpID_RSOC")))
+  .where('CampRound','==', sGroupRound)
+  .limit(1)
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      xCheck = 1;
+      xTime = doc.data().TimeIN;
+    }); 
+    document.getElementById('loading').style.display='none';
+    if(xTime!="" && xCheck==1) {
+      document.getElementById('OldSurvey').style.display='block';
+    } else if(xTime=="" && xCheck==1) {
+      document.getElementById('id01').style.display='block';
+    } else {
+      document.getElementById('id02').style.display='block';
+    }
+  });
+}
+
+
+var gcheck = 0;
+function CheckRewards() {
+  //console.log(sessionStorage.getItem("EmpID_RSOC"));
+  dbGiftRewards.where('EmpID','==',sessionStorage.getItem("EmpID_RSOC"))
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      gcheck = 1;
+      document.getElementById('loading').style.display='none';
+      document.getElementById('OldSurvey').style.display='none';
+      document.getElementById('ShowRewards').style.display='block';
+    });
+    if(gcheck==0) {
+      document.getElementById('loading').style.display='none';
+      document.getElementById('OldSurvey').style.display='block';
+      document.getElementById('ShowRewards').style.display='none';
+    }
+  });
+}
+
+
+function NewDate() {
+  var today = new Date();
+  var day = today.getDate() + "";
+  var month = (today.getMonth() + 1) + "";
+  var year = today.getFullYear() + "";
+  var hour = today.getHours() + "";
+  var minutes = today.getMinutes() + "";
+  var seconds = today.getSeconds() + "";
+  var ampm = hour >= 12 ? 'PM' : 'AM';
+  day = checkZero(day);
+  month = checkZero(month);
+  year = checkZero(year);
+  hour = checkZero(hour);
+  minutes = checkZero(minutes);
+  seconds = checkZero(seconds);
+  dateString = day + "/" + month + "/" + year + " " + hour + ":" + minutes + ":" + seconds +" "+ ampm;
+}
+
+
+function checkZero(data){
+  if(data.length == 1){
+    data = "0" + data;
+  }
+  return data;
+}
+
+function ClickBox() {
+  document.getElementById('id01').style.display='block';
+}
+
+function CloseAll() {
+  document.getElementById('id01').style.display='none';
+  document.getElementById('id02').style.display='none';
+}

@@ -1,1 +1,393 @@
-var _0x385f45=_0x1af4;(function(_0x57ed19,_0x9c87d7){var _0x3650e8=_0x1af4,_0x3f5ec1=_0x57ed19();while(!![]){try{var _0x2b2041=parseInt(_0x3650e8(0x1a2))/0x1*(parseInt(_0x3650e8(0x1a3))/0x2)+parseInt(_0x3650e8(0x19b))/0x3*(parseInt(_0x3650e8(0x1b1))/0x4)+-parseInt(_0x3650e8(0x19e))/0x5+-parseInt(_0x3650e8(0x1c8))/0x6*(parseInt(_0x3650e8(0x1a4))/0x7)+parseInt(_0x3650e8(0x1af))/0x8+-parseInt(_0x3650e8(0x1d6))/0x9+parseInt(_0x3650e8(0x181))/0xa;if(_0x2b2041===_0x9c87d7)break;else _0x3f5ec1['push'](_0x3f5ec1['shift']());}catch(_0x2dda26){_0x3f5ec1['push'](_0x3f5ec1['shift']());}}}(_0x435c,0x3bdeb));var dateString=new Date()[_0x385f45(0x193)]('en-US',{'timeZone':'Asia/Jakarta'}),today=new Date(),dd=String(today[_0x385f45(0x190)]())[_0x385f45(0x17b)](0x2,'0'),mm=String(today[_0x385f45(0x1e4)]()+0x1)[_0x385f45(0x17b)](0x2,'0'),yyyy=today[_0x385f45(0x1b2)]()+0x21f;today=dd+'/'+mm+'/'+yyyy;var cleararray='',randomDegree=0x0,xGroupGift=0x0,Eid='',ShowGift='';$(document)['ready'](function(){var _0x57e8cb=_0x385f45;sessionStorage[_0x57e8cb(0x194)](_0x57e8cb(0x1ab))==null&&(location[_0x57e8cb(0x1b8)]=_0x57e8cb(0x1e5)),Connect_DB(),dbGiftRewards=firebase[_0x57e8cb(0x1cc)]()[_0x57e8cb(0x1a7)](_0x57e8cb(0x1c0)),CheckData();});function CheckData(){var _0xe1c03c=_0x385f45,_0x4b4fc4='';gcheck=0x0,dbGiftRewards[_0xe1c03c(0x19f)]('EmpID','==',sessionStorage[_0xe1c03c(0x194)](_0xe1c03c(0x1ab)))[_0xe1c03c(0x1e9)]()[_0xe1c03c(0x1a9)](_0x437e3b=>{var _0x3bf956=_0xe1c03c;_0x437e3b[_0x3bf956(0x184)](_0x3cc4a3=>{var _0x1e7cdd=_0x3bf956;gcheck=0x1,Eid=_0x3cc4a3['id'],ShowGift=_0x3cc4a3[_0x1e7cdd(0x1e7)]()[_0x1e7cdd(0x199)],document[_0x1e7cdd(0x1c5)]('loading')[_0x1e7cdd(0x1ba)][_0x1e7cdd(0x1b5)]=_0x1e7cdd(0x1ad),document[_0x1e7cdd(0x1c5)](_0x1e7cdd(0x1cb))[_0x1e7cdd(0x1ba)]['display']=_0x1e7cdd(0x17f),_0x4b4fc4+='<center>';if(_0x3cc4a3[_0x1e7cdd(0x1e7)]()[_0x1e7cdd(0x199)]=='gift-99')_0x4b4fc4+=_0x1e7cdd(0x195)+_0x3cc4a3[_0x1e7cdd(0x1e7)]()[_0x1e7cdd(0x199)]+_0x1e7cdd(0x1d7),_0x4b4fc4+=_0x1e7cdd(0x19c)+_0x3cc4a3['data']()[_0x1e7cdd(0x18e)]+_0x1e7cdd(0x1d3);else{_0x4b4fc4+=_0x1e7cdd(0x195)+_0x3cc4a3[_0x1e7cdd(0x1e7)]()[_0x1e7cdd(0x199)]+_0x1e7cdd(0x1c7);if(_0x3cc4a3[_0x1e7cdd(0x1e7)]()[_0x1e7cdd(0x1e3)]==0x1)_0x4b4fc4+='<div\x20class=\x22boxtext\x22\x20style=\x22margin-top:30px;\x20color:#000;\x22>ยินดีด้วยคุณได้รับรางวัล<br><b>'+_0x3cc4a3[_0x1e7cdd(0x1e7)]()[_0x1e7cdd(0x1db)]+_0x1e7cdd(0x1d9),_0x4b4fc4+=_0x1e7cdd(0x17d),_0x4b4fc4+=_0x1e7cdd(0x188);else _0x3cc4a3[_0x1e7cdd(0x1e7)]()[_0x1e7cdd(0x1e3)]==0x2&&(_0x4b4fc4+=_0x1e7cdd(0x1d0)+_0x3cc4a3[_0x1e7cdd(0x1e7)]()[_0x1e7cdd(0x1db)]+_0x1e7cdd(0x180)+_0x3cc4a3[_0x1e7cdd(0x1e7)]()['SendGift']+_0x1e7cdd(0x1e8),_0x4b4fc4+=_0x1e7cdd(0x1aa),_0x4b4fc4+=_0x1e7cdd(0x1c9));}_0x4b4fc4+='</center>',$('#DisplayGift')[_0x1e7cdd(0x1ca)](_0x4b4fc4);}),gcheck==0x0&&(document[_0x3bf956(0x1c5)](_0x3bf956(0x1c1))[_0x3bf956(0x1ba)][_0x3bf956(0x1b5)]=_0x3bf956(0x1ad),document['getElementById'](_0x3bf956(0x1ae))[_0x3bf956(0x1ba)][_0x3bf956(0x1b5)]=_0x3bf956(0x17f),document[_0x3bf956(0x1c5)](_0x3bf956(0x1c6))[_0x3bf956(0x1ba)]['display']=_0x3bf956(0x17f));});}function _0x1af4(_0x1645f7,_0x553061){var _0x435c2f=_0x435c();return _0x1af4=function(_0x1af45b,_0x38856c){_0x1af45b=_0x1af45b-0x179;var _0x43a216=_0x435c2f[_0x1af45b];return _0x43a216;},_0x1af4(_0x1645f7,_0x553061);}function _0x435c(){var _0x592c78=['LinePicture','giftcode','doc','6XllGzc','<div\x20class=\x22boxtext\x22\x20style=\x22margin-top:10px;\x22><b>เสียใจด้วยน้า</b><br>คุณยังไม่ได้รับรางวัล<br>แล้วมาร่วมกิจกรรมกันใหม่น้า\x20...<div\x20style=\x22font-size:11px;\x22>Date\x20:\x20','EmpAddress','868840BIPEYW','where','disabled','<center><div\x20class=\x22boxtext\x22><b>คุณไม่ได้รับรางวัล</b><br><font\x20color=\x22#000000\x22>แล้วมาร่วมกิจกรรมกันใหม่น้า</font></div></center>','281549vqfZPr','2Elcfyc','7HvDzgm','innerHTML','click','collection','length','then','<div\x20class=\x22btn-t2\x22\x20style=\x22margin-top:40px;background:\x20#0056ff;\x20border:2px\x20solid\x20#fff;\x20color:#fff;\x20margin-right:\x203px;\x22\x20onclick=\x22Opengift()\x22>ดูรายการของรางวัล</div>','EmpID_RSOC','#e30000','none','id01','398336RhcrEM','rotation','823572eiFLnI','getFullYear','pause','querySelector','display','floor','autoplay','href','addEventListener','style','push','EmpPhone','<div\x20style=\x22margin:20px\x20auto;\x22><img\x20src=\x22./img/','id02','<center><div\x20class=\x22boxtext\x22\x20style=\x22margin-top:14px;\x22>ยินดีด้วย\x20...\x20คุณได้รับรางวัล<br><b>','RSOCtownhall','loading','spin-btn','load','EmpID','getElementById','StartGame','.png\x22\x22\x20style=\x22width:200px;\x22/></div>','1103406LViJBi','<div\x20class=\x22btn-t2\x22\x20style=\x22margin-top:40px;background:\x20#0056ff;\x20border:2px\x20solid\x20#fff;\x20color:#fff;\x22\x20onclick=\x22OpenRewards()\x22>รายชื่อผู้ได้รับรางวัล</div>','html','ShowWheel1','firestore','id04','LineName','<div\x20style=\x22margin:20px\x20auto\x200px\x20auto;\x22><img\x20src=\x22./img/gift-99.png\x22\x20style=\x22width:260px;\x22/></div>','<div\x20class=\x22boxtext\x22\x20style=\x22margin-top:30px;\x20color:#000;\x22>ยินดีด้วยคุณได้รับรางวัล<br><b>','.png\x22\x20style=\x22position:\x20relative;\x20width:220px;right:\x200%;\x22></center></div>','getSeconds','</div></div>','ShowWheel','round','2422197txMBZC','.png\x22\x20style=\x22width:220px;\x22/></div>','<div\x20style=\x22margin:30px\x20auto\x200px\x20auto;\x22><img\x20src=\x22./img/gift-99.png\x22\x20style=\x22width:260px;\x22/></div>','</b></div>','wheel','giftname','getHours','<div\x20class=\x22btn-1\x22\x20style=\x22margin-top:25px;\x20margin-bottom:\x2015px;\x20background:#059c28;\x22>ผลการหมุนรางวัล</div>','#DisplayConfirmGift','id05','update','#3cb219','<div\x20style=\x22margin:20px\x20auto\x20-10px\x20auto;\x22><img\x20src=\x22./img/gift-99.gif\x22\x20style=\x22width:260px;\x22/></div>','StatusSend','getMonth','index.html','<p\x20style=\x22text-align:\x20center;font-size:14px;\x20color:#fff;\x22><b>Good\x20Luck!</b></p>','data','</div>','get','getMinutes','<div\x20style=\x22margin:25px\x20auto\x2012px\x20auto;\x22><center><img\x20src=\x22./img/','padStart','now','<div\x20style=\x22margin-top:35px;\x20color:#fff;\x22>ติดต่อรับของรางวัลก่อนกดปุ่มด้านล่าง</div>','<div\x20class=\x22btn-t2\x22\x20style=\x22margin:20px\x20auto;\x20background:\x20#dc3545;\x20color:#fff;\x20margin-right:5px;\x22\x20onclick=\x22GiftConfirm()\x22>ยืนยันการรับรางวัล</div>','block','</b><br><br>คุณได้รับรางวัลเรียบร้อยแล้ว<br>','1289020JZKniK','<div\x20class=\x22btn-t2\x22\x20style=\x22margin:20px\x20auto;\x20background:\x20#28a745;\x20color:#fff;\x22\x20onclick=\x22CloseAll()\x22>ยังไม่รับตอนนี้</div>','#DisplayGift','forEach','<div\x20class=\x22btn-1\x22\x20style=\x22margin-top:25px;\x20margin-bottom:\x2015px;\x22>ยืนยันการรับรางวัล</div>','</b></div></center>','<center><div\x20class=\x22boxtext\x22><b>คุณไม่ได้รับรางวัล</b><br>แล้วมาร่วมกิจกรรมกันใหม่น้า</div></center>','<div\x20class=\x22btn-t2\x22\x20style=\x22margin-top:20px;background:\x20#28a745;\x20border:2px\x20solid\x20#fff;\x20color:#fff;\x20padding:10px\x2035px;\x22\x20onclick=\x22GetRewards()\x22>!!!\x20อย่าพึ่งกดปุ่มนี้\x20!!!<br>หากคุณยังไม่ได้รับรางวัล</div>','id03','game.html','<center><div\x20class=\x22boxtext\x22><b>ยินดีด้วย\x20...\x20คุณได้รับรางวัล</b><br>กดปิดหน้าต่างเพื่อดูรางวัลของคุณ</div></center>','currentTime','LineID','DateRegister','labels','getDate','<div\x20style=\x22color:#fff;font-size:\x2013px;\x22>หากท่านได้ทำการรับรางวัลเรียบร้อยแล้ว<br><b>ให้ทำการกดยืนยันการรับรางวัลด้านล่าง</b></font></div>','dataIndex','toLocaleString','getItem','<div\x20style=\x22margin:50px\x20auto\x2010px\x20auto;\x22><img\x20src=\x22./img/','limit','options'];_0x435c=function(){return _0x592c78;};return _0x435c();}const wheel=document[_0x385f45(0x1c5)](_0x385f45(0x1da)),spinBtn=document[_0x385f45(0x1c5)](_0x385f45(0x1c2)),finalValue=document[_0x385f45(0x1c5)]('final-value'),rotationValues=[{'minDegree':0x0,'maxDegree':0x1e,'value':0x2},{'minDegree':0x1f,'maxDegree':0x5a,'value':0x1},{'minDegree':0x5b,'maxDegree':0x96,'value':0x6},{'minDegree':0x97,'maxDegree':0xd2,'value':0x5},{'minDegree':0xd3,'maxDegree':0x10e,'value':0x4},{'minDegree':0x10f,'maxDegree':0x14a,'value':0x3}],data=[0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10];var pieColors=[_0x385f45(0x1e1),_0x385f45(0x1ac),_0x385f45(0x1e1),'#e30000',_0x385f45(0x1e1),_0x385f45(0x1ac),_0x385f45(0x1e1),'#e30000'];let myChart=new Chart(wheel,{'plugins':[ChartDataLabels],'type':'pie','data':{'labels':[0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8],'datasets':[{'backgroundColor':pieColors,'data':data}]},'options':{'responsive':!![],'animation':{'duration':0x0},'plugins':{'tooltip':![],'legend':{'display':![]},'datalabels':{'color':'#ffffff','formatter':(_0x482f71,_0x36d903)=>_0x36d903['chart'][_0x385f45(0x1e7)][_0x385f45(0x18f)][_0x36d903[_0x385f45(0x192)]],'font':{'size':0x18}}}}});const valueGenerator=_0xb2484=>{var _0x2d243f=_0x385f45;document['getElementById'](_0x2d243f(0x1d4))[_0x2d243f(0x1ba)][_0x2d243f(0x1b5)]=_0x2d243f(0x1ad),document[_0x2d243f(0x1c5)]('final-value')['style'][_0x2d243f(0x1b5)]='none',document[_0x2d243f(0x1c5)](_0x2d243f(0x1cb))[_0x2d243f(0x1ba)][_0x2d243f(0x1b5)]=_0x2d243f(0x17f),SaveReward();};let count=0x0,resultValue=0x65;spinBtn[_0x385f45(0x1b9)](_0x385f45(0x1a6),()=>{var _0x1fe12c=_0x385f45;RandomRewards(),spinBtn[_0x1fe12c(0x1a0)]=!![],finalValue[_0x1fe12c(0x1a5)]=_0x1fe12c(0x1e6);let _0x44471d=window['setInterval'](()=>{var _0x145192=_0x1fe12c;myChart['options'][_0x145192(0x1b0)]=myChart[_0x145192(0x197)]['rotation']+resultValue,myChart[_0x145192(0x1e0)]();if(myChart['options'][_0x145192(0x1b0)]>=0x14b)count+=0x1,resultValue-=0x5,myChart[_0x145192(0x197)][_0x145192(0x1b0)]=0x0,count==0x15&&(clearInterval(_0x44471d),valueGenerator(0x0));else count>0xf&&myChart[_0x145192(0x197)][_0x145192(0x1b0)]==randomDegree&&(clearInterval(_0x44471d),valueGenerator(randomDegree),count=0x0,resultValue=0x65);},0xa);});var ArrRewards=[],NewRewards='';function RandomRewards(){var _0x4e1bbc=_0x385f45,_0x2f3c37=0x0;Eidewards='',dbGiftRewards[_0x4e1bbc(0x19f)](_0x4e1bbc(0x18d),'==','')[_0x4e1bbc(0x1e9)]()[_0x4e1bbc(0x1a9)](_0x1d4537=>{var _0x15b118=_0x4e1bbc;_0x1d4537[_0x15b118(0x184)](_0x26ab76=>{var _0xe53df9=_0x15b118;ArrRewards[_0xe53df9(0x1bb)]([_0x26ab76['id'],_0x26ab76[_0xe53df9(0x1e7)]()[_0xe53df9(0x1db)],_0x26ab76['data']()['giftcode']]);}),NewRewards=random_item(ArrRewards),Eid=NewRewards[0x0],ReCheckUser();});}function ReCheckUser(){var _0x17f5e7=_0x385f45;dbGiftRewards['where'](_0x17f5e7(0x1c4),'==',sessionStorage['getItem'](_0x17f5e7(0x1ab)))[_0x17f5e7(0x196)](0x1)[_0x17f5e7(0x1e9)]()['then'](_0x11b96e=>{var _0x2d47f0=_0x17f5e7;_0x11b96e[_0x2d47f0(0x184)](_0x2c5d24=>{var _0x5ecc91=_0x2d47f0;document[_0x5ecc91(0x1c5)]('id04')[_0x5ecc91(0x1ba)][_0x5ecc91(0x1b5)]=_0x5ecc91(0x17f);}),ShowGift=NewRewards[0x2];});}function SaveReward(){var _0x4bd404=_0x385f45,_0xe85f7a='',_0x562bf6='';NewDate();var _0x5a6ad9=Math[_0x4bd404(0x1d5)](Date[_0x4bd404(0x17c)]()/0x3e8);dbGiftRewards[_0x4bd404(0x19a)](Eid)['update']({'LineID':sessionStorage[_0x4bd404(0x194)]('LineID'),'LineName':sessionStorage[_0x4bd404(0x194)](_0x4bd404(0x1ce)),'LinePicture':sessionStorage['getItem'](_0x4bd404(0x198)),'EmpID':sessionStorage[_0x4bd404(0x194)](_0x4bd404(0x1ab)),'EmpName':sessionStorage[_0x4bd404(0x194)]('EmpName_RSOC'),'Phone':sessionStorage[_0x4bd404(0x194)](_0x4bd404(0x1bc)),'address':sessionStorage[_0x4bd404(0x194)](_0x4bd404(0x19d)),'ResultQuiz':NewRewards[0x2],'StatusSend':0x1,'DateRegister':dateString,'TimeStamp':_0x5a6ad9}),document[_0x4bd404(0x1c5)](_0x4bd404(0x1be))[_0x4bd404(0x1ba)][_0x4bd404(0x1b5)]=_0x4bd404(0x17f),parseFloat(xGroupGift)==0x6?(_0xe85f7a+=_0x4bd404(0x1d8),_0xe85f7a+=_0x4bd404(0x1a1),_0x562bf6+='<div\x20class=\x22btn-1\x22\x20style=\x22margin-top:25px;\x20margin-bottom:\x2015px;\x20background:#059c28;\x22>ผลการหมุนรางวัล</div>',_0x562bf6+=_0x4bd404(0x1cf),_0x562bf6+=_0x4bd404(0x187)):(_0xe85f7a+=_0x4bd404(0x17a)+NewRewards[0x2]+_0x4bd404(0x1d1),_0xe85f7a+=_0x4bd404(0x1bf)+NewRewards[0x1]+_0x4bd404(0x186),_0xe85f7a+=_0x4bd404(0x17d),_0xe85f7a+=_0x4bd404(0x188),_0x562bf6+=_0x4bd404(0x1dd),_0x562bf6+=_0x4bd404(0x1e2),_0x562bf6+=_0x4bd404(0x18b)),$(_0x4bd404(0x183))['html'](_0xe85f7a),$('#DisplayGiftRewards')['html'](_0x562bf6);}function GetCodeRandom(_0x25fe89,_0x446220,_0x3f0a67){}function GetRewards(){var _0x3bb274=_0x385f45,_0x32732f='';_0x32732f+=_0x3bb274(0x185),_0x32732f+=_0x3bb274(0x1bd)+ShowGift+_0x3bb274(0x1d7),_0x32732f+=_0x3bb274(0x191),_0x32732f+=_0x3bb274(0x17e),_0x32732f+=_0x3bb274(0x182),$(_0x3bb274(0x1de))['html'](_0x32732f),document[_0x3bb274(0x1c5)]('id05')[_0x3bb274(0x1ba)][_0x3bb274(0x1b5)]='block';}function GiftConfirm(){var _0x560ac8=_0x385f45;NewDate(),$(_0x560ac8(0x183))['html'](cleararray),document[_0x560ac8(0x1c5)](_0x560ac8(0x1df))[_0x560ac8(0x1ba)][_0x560ac8(0x1b5)]=_0x560ac8(0x1ad),document[_0x560ac8(0x1c5)](_0x560ac8(0x1c1))['style']['display']='block',dbGiftRewards['doc'](Eid)[_0x560ac8(0x1e0)]({'StatusSend':0x2,'SendGift':dateString});var _0x3bd527=setTimeout(CheckData,0x3e8);}function random_item(_0x13bdff){var _0x5def34=_0x385f45;return _0x13bdff[Math[_0x5def34(0x1b6)](Math['random']()*_0x13bdff[_0x5def34(0x1a8)])];}function Opengift(){var _0x254a43=_0x385f45;document[_0x254a43(0x1c5)](_0x254a43(0x189))[_0x254a43(0x1ba)]['display']=_0x254a43(0x17f);}function Song1(){var _0x1b5692=_0x385f45;CloseVDO();var _0x2d4452=document[_0x1b5692(0x1c5)]('myaudio1');_0x2d4452[_0x1b5692(0x1b7)]=!![],_0x2d4452[_0x1b5692(0x1c3)](),document[_0x1b5692(0x1c5)](_0x1b5692(0x1ae))['style'][_0x1b5692(0x1b5)]=_0x1b5692(0x1ad);}function CloseVDO(){var _0x262659=_0x385f45,_0x5c0bad=document[_0x262659(0x1b4)]('#myaudio1');_0x5c0bad[_0x262659(0x1b3)](),_0x5c0bad[_0x262659(0x18c)]=0x0;}function OpenReload(){var _0x2b4950=_0x385f45;location['href']=_0x2b4950(0x18a);}function OpenRewards(){location['href']='rewards.html';}function NewDate(){var _0x5372b6=_0x385f45,_0x53ce72=new Date(),_0x2819b2=_0x53ce72[_0x5372b6(0x190)]()+'',_0x356d74=_0x53ce72[_0x5372b6(0x1e4)]()+0x1+'',_0x34bd74=_0x53ce72['getFullYear']()+'',_0x2323a2=_0x53ce72[_0x5372b6(0x1dc)]()+'',_0x13048b=_0x53ce72[_0x5372b6(0x179)]()+'',_0x8d30b9=_0x53ce72[_0x5372b6(0x1d2)]()+'',_0x23e464=_0x2323a2>=0xc?'PM':'AM';_0x2819b2=checkZero(_0x2819b2),_0x356d74=checkZero(_0x356d74),_0x34bd74=checkZero(_0x34bd74),_0x2323a2=checkZero(_0x2323a2),_0x13048b=checkZero(_0x13048b),_0x8d30b9=checkZero(_0x8d30b9),dateString=_0x2819b2+'/'+_0x356d74+'/'+_0x34bd74+'\x20'+_0x2323a2+':'+_0x13048b+':'+_0x8d30b9+'\x20'+_0x23e464;}function checkZero(_0x2c9b64){var _0x1a19ca=_0x385f45;return _0x2c9b64[_0x1a19ca(0x1a8)]==0x1&&(_0x2c9b64='0'+_0x2c9b64),_0x2c9b64;}function CloseAll(){var _0x3a46a9=_0x385f45;document['getElementById']('id01')[_0x3a46a9(0x1ba)]['display']=_0x3a46a9(0x1ad),document[_0x3a46a9(0x1c5)](_0x3a46a9(0x1be))[_0x3a46a9(0x1ba)]['display']=_0x3a46a9(0x1ad),document[_0x3a46a9(0x1c5)]('id03')[_0x3a46a9(0x1ba)][_0x3a46a9(0x1b5)]=_0x3a46a9(0x1ad),document[_0x3a46a9(0x1c5)](_0x3a46a9(0x1cd))[_0x3a46a9(0x1ba)]['display']=_0x3a46a9(0x1ad),document[_0x3a46a9(0x1c5)](_0x3a46a9(0x1df))['style']['display']=_0x3a46a9(0x1ad);}
+var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear()+543;
+today = dd + '/' + mm + '/' + yyyy;
+var cleararray = "";
+var randomDegree = 0;
+var xGroupGift = 0;
+var Eid = "";
+var ShowGift = "";
+var ShowPrize = "";
+
+$(document).ready(function () {
+  if(sessionStorage.getItem("EmpID_RSOC")==null) { location.href = "index.html"; }
+  Connect_DB();
+  dbGiftRewards = firebase.firestore().collection("RSOCtownhall");
+  //document.getElementById('id01').style.display='block';
+  CheckData();
+});
+
+
+function CheckData() {
+  var str = "";
+  gcheck = 0;
+  dbGiftRewards.where('EmpID','==',sessionStorage.getItem("EmpID_RSOC"))
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      gcheck = 1;
+      Eid = doc.id;
+      ShowGift = doc.data().giftcode;
+      ShowPrize = doc.data().giftname;
+      //console.log("Found : "+gcheck+" --- "+ doc.data().giftcode+" --- "+ doc.data().giftname );
+      document.getElementById('loading').style.display='none';
+      document.getElementById('ShowWheel1').style.display='block';
+      str += '<center>';
+      if(doc.data().giftcode=="gift-99") {
+        str += '<div style="margin:50px auto 10px auto;"><img src="./img/'+ doc.data().giftcode +'.png" style="width:220px;"/></div>';
+        str += '<div class="boxtext" style="margin-top:10px;"><b>เสียใจด้วยน้า</b><br>คุณยังไม่ได้รับรางวัล<br>แล้วมาร่วมกิจกรรมกันใหม่น้า ...<div style="font-size:11px;">Date : '+ doc.data().DateRegister +'</div></div>';
+      } else {
+        str += '<div style="margin:50px auto 10px auto;"><img src="./img/'+ doc.data().giftcode +'.png"" style="width:220px;"/></div>';
+        if(doc.data().StatusSend==1) {
+          str += '<div class="boxtext" style="margin-top:20px; color:#000;">ยินดีด้วยคุณได้รับรางวัล<br><b>'+ doc.data().giftname +'</b></div>';
+          str += '<div style="margin-top:35px; color:#fff;">ติดต่อรับของรางวัลก่อนกดปุ่มด้านล่าง</div>';
+          str += '<div class="btn-t2" style="margin-top:20px;background: #28a745; border:2px solid #fff; color:#fff; padding:10px 35px;" onclick="GetRewards()">!!! อย่าพึ่งกดปุ่มนี้ !!!<br>หากคุณยังไม่ได้รับรางวัล</div>';
+        } else if(doc.data().StatusSend==2) {
+          str += '<div class="boxtext" style="margin-top:20px; color:#000;">ยินดีด้วยคุณได้รับรางวัล<br><b>'+ doc.data().giftname +'</b><br><br>คุณได้รับรางวัลเรียบร้อยแล้ว<br>'+ doc.data().SendGift +'</div>';
+          str += '<div class="btn-t2" style="margin-top:40px;background: #0056ff; border:2px solid #fff; color:#fff; margin-right: 3px;" onclick="Opengift()">ดูรายการของรางวัล</div>';
+          str += '<div class="btn-t2" style="margin-top:40px;background: #0056ff; border:2px solid #fff; color:#fff;" onclick="OpenRewards()">รายชื่อผู้ได้รับรางวัล</div>';
+          //str += '<div class="btn-t2" style="margin-top:30px;background: #6c757d; border:2px solid #fff; color:#fff; padding:10px 35px;">คุณรับรางวัลเรียบร้อยแล้ว<br>'+ doc.data().SendGift +'</div>';
+        }
+      }
+      str += '</center>';
+      $("#DisplayGift").html(str);
+    });
+    if(gcheck==0) {
+      //console.log(gcheck);
+      document.getElementById('loading').style.display='none';
+      document.getElementById('id01').style.display='block';
+      document.getElementById('StartGame').style.display='block';
+    }
+  });
+}
+
+
+
+const wheel = document.getElementById("wheel");
+const spinBtn = document.getElementById("spin-btn");
+const finalValue = document.getElementById("final-value");
+const rotationValues = [
+  { minDegree: 0, maxDegree: 30, value: 2 },
+  { minDegree: 31, maxDegree: 90, value: 1 },
+  { minDegree: 91, maxDegree: 150, value: 6 },
+  { minDegree: 151, maxDegree: 210, value: 5 },
+  { minDegree: 211, maxDegree: 270, value: 4 },
+  { minDegree: 271, maxDegree: 330, value: 3 },
+];
+const data = [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16];
+var pieColors = [
+  "#3cb219",
+  "#e30000",
+  "#3cb219",
+  "#e30000",
+  "#3cb219",
+  "#e30000",
+  "#3cb219",
+  "#e30000",
+  "#3cb219",
+  "#e30000",
+  "#0056ff",
+];
+let myChart = new Chart(wheel, {
+  plugins: [ChartDataLabels],
+  type: "pie",
+  data: {
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    datasets: [
+      {
+        backgroundColor: pieColors,
+        data: data,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    animation: { duration: 0 },
+    plugins: {
+      tooltip: false,
+      legend: {
+        display: false,
+      },
+      datalabels: {
+        color: "#ffffff",
+        formatter: (_, context) => context.chart.data.labels[context.dataIndex],
+        font: { size: 24 },
+      },
+    },
+  },
+});
+const valueGenerator = (angleValue) => {
+  document.getElementById('ShowWheel').style.display='none';
+  document.getElementById('final-value').style.display='none';
+  document.getElementById('ShowWheel1').style.display='block';
+  SaveReward();
+/*
+  for (let i of rotationValues) {
+    if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
+      var varTimerInMiliseconds = 2000;
+      setTimeout(function(){ 
+        document.getElementById('ShowWheel').style.display='none';
+        document.getElementById('final-value').style.display='none';
+        document.getElementById('ShowWheel1').style.display='block';
+        SaveReward();
+      }, varTimerInMiliseconds);
+      spinBtn.disabled = false;
+      break;
+    }
+  }
+*/
+};
+
+
+let count = 0;
+let resultValue = 101;
+spinBtn.addEventListener("click", () => {
+  RandomRewards();
+  spinBtn.disabled = true;
+  finalValue.innerHTML = `<p style="text-align: center;font-size:14px; color:#fff;"><b>Good Luck!</b></p>`;
+  //let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
+  //console.log("random-"+randomDegree);
+  //let randomDegree = 5;
+  //Interval for rotation animation
+
+  let rotationInterval = window.setInterval(() => {
+    myChart.options.rotation = myChart.options.rotation + resultValue;
+    myChart.update();
+    if (myChart.options.rotation >= 331) {
+      count += 1;
+      resultValue -= 5;
+      myChart.options.rotation = 0;
+      if(count==21) {
+        clearInterval(rotationInterval);
+        valueGenerator(0);
+      }
+      //console.log(count);
+    } else if (count > 15 && myChart.options.rotation == randomDegree) {
+      clearInterval(rotationInterval);
+      valueGenerator(randomDegree);
+      count = 0;
+      resultValue = 101;
+    }
+  }, 10);
+});
+
+
+var ArrRewards = [];
+var NewRewards = "";
+function RandomRewards() { 
+  var i = 0;
+  Eidewards = "";
+  dbGiftRewards.where('LineID','==','')
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=>{
+      ArrRewards.push([doc.id, doc.data().giftname, doc.data().giftcode ]);
+    });
+    //console.log(ArrRewards);
+    NewRewards = random_item(ArrRewards);
+    Eid = NewRewards[0];
+    //console.log(NewRewards[1]);
+    ReCheckUser();
+  });  
+}
+
+
+function ReCheckUser() { 
+  dbGiftRewards.where('EmpID','==',sessionStorage.getItem("EmpID_RSOC"))
+  .limit(1)
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=>{
+      document.getElementById('id04').style.display='block';
+      //location.href = "game.html";
+    });
+    //GetCodeRandom(NewRewards[0], NewRewards[1], NewRewards[2]);
+    ShowGift = NewRewards[2];
+    ShowPrize = NewRewards[1];
+    //console.log(NewRewards[1]);
+  });  
+}
+
+
+function SaveReward() {
+  var str = "";
+  var str0 = "";
+  
+  NewDate();
+  var TimeStampDate = Math.round(Date.now() / 1000);
+  dbGiftRewards.doc(Eid).update({
+    LineID : sessionStorage.getItem("LineID"),
+    LineName : sessionStorage.getItem("LineName"),
+    LinePicture : sessionStorage.getItem("LinePicture"),
+    EmpID : sessionStorage.getItem("EmpID_RSOC"),
+    EmpName : sessionStorage.getItem("EmpName_RSOC"),
+    Phone : sessionStorage.getItem("EmpPhone"),
+    address : sessionStorage.getItem("EmpAddress"),
+    ResultQuiz : NewRewards[2],
+    StatusSend : 1,
+    DateRegister : dateString,
+    TimeStamp : TimeStampDate
+  });
+
+  //var myTimeout = setTimeout(ShowRewards, 2000);
+  document.getElementById('id02').style.display='block';
+  if(parseFloat(xGroupGift)==6) {
+    str += '<div style="margin:30px auto 0px auto;"><img src="./img/gift-99.png" style="width:260px;"/></div>';
+    str += '<center><div class="boxtext"><b>คุณไม่ได้รับรางวัล</b><br><font color="#000000">แล้วมาร่วมกิจกรรมกันใหม่น้า</font></div></center>';        
+    str0 += '<div class="btn-1" style="margin-top:25px; margin-bottom: 15px; background:#059c28;">ผลการหมุนรางวัล</div>';
+    str0 += '<div style="margin:20px auto 0px auto;"><img src="./img/gift-99.png" style="width:260px;"/></div>';
+    str0 += '<center><div class="boxtext"><b>คุณไม่ได้รับรางวัล</b><br>แล้วมาร่วมกิจกรรมกันใหม่น้า</div></center>';
+  } else {
+    str += '<div style="margin:20px auto 12px auto;"><center><img src="./img/'+ NewRewards[2] +'.png" style="position: relative; width:220px;right: 0%;"></center></div>';
+    str += '<center><div class="boxtext" style="margin-top:14px;">ยินดีด้วย ... คุณได้รับรางวัล<br><b>'+ NewRewards[1] +'</b></div></center>';
+    str += '<div style="margin-top:35px; color:#fff;">ติดต่อรับของรางวัลก่อนกดปุ่มด้านล่าง</div>';
+    str += '<div class="btn-t2" style="margin-top:20px;background: #28a745; border:2px solid #fff; color:#fff; padding:10px 35px;" onclick="GetRewards()">!!! อย่าพึ่งกดปุ่มนี้ !!!<br>หากคุณยังไม่ได้รับรางวัล</div>';
+    str0 += '<div class="btn-1" style="margin-top:25px; margin-bottom: 15px; background:#059c28;">ผลการหมุนรางวัล</div>';
+    str0 += '<div style="margin:20px auto -10px auto;"><img src="./img/gift-99.gif" style="width:260px;"/></div>';
+    str0 += '<center><div class="boxtext"><b>ยินดีด้วย ... คุณได้รับรางวัล</b><br>กดปิดหน้าต่างเพื่อดูรางวัลของคุณ</div></center>';
+  }
+  $("#DisplayGift").html(str);
+  $("#DisplayGiftRewards").html(str0);
+}
+
+
+function GetCodeRandom(id,x,y) {
+  //console.log("Random name gift = "+ y +" ("+ x +") -->"+ id);
+  //NewDate();
+  //var TimeStampDate = Math.round(Date.now() / 1000);
+  /*
+  randomDegree = 0;
+  switch(y) {
+    case "gift-01":
+      randomDegree = 85;
+      xGroupGift = 1;
+      xResultQuiz = "";
+      break;
+    case "gift-02":
+      randomDegree = 17;
+      xGroupGift = 2;
+      break;
+    case "gift-03":
+      randomDegree = 326;
+      xGroupGift = 3;
+      break;
+    case "gift-04":
+      randomDegree = 265;
+      xGroupGift = 4;
+      break;
+    case "gift-05":
+      randomDegree = 207;
+      xGroupGift = 5;
+      break;
+    case "gift-99":
+      randomDegree = 139;
+      xGroupGift = 6;
+      break;
+    default:
+    randomDegree = 17;
+    xGroupGift = 2;
+
+  }
+  if(parseFloat(randomDegree)==0) {
+    location.href = "game.html";
+  }
+  */
+  //console.log("randomDegree = "+randomDegree);
+  //SaveData();
+}
+
+
+function GetRewards() {
+  var str = "";
+  str += '<div class="btn-1" style="margin-top:25px; margin-bottom: 15px;">ยืนยันการรับรางวัล</div>';
+  str += '<center><div style="margin:50px auto 30px auto;"><img src="./img/'+ ShowGift +'.png" style="width:220px;"/><div class="boxtext" style="margin-top:20px; color:#000;"><b>'+ ShowPrize +'</b></div></div></center>';
+  str += '<div style="color:#fff;font-size: 13px;">หากท่านได้ทำการรับรางวัลเรียบร้อยแล้ว<br><b>ให้ทำการกดยืนยันการรับรางวัลด้านล่าง</b></font></div>';
+  str += '<div class="btn-t2" style="margin:20px auto; background: #dc3545; color:#fff; margin-right:5px;" onclick="GiftConfirm()">ยืนยันการรับรางวัล</div>';
+  str += '<div class="btn-t2" style="margin:20px auto; background: #28a745; color:#fff;" onclick="CloseAll()">ยังไม่รับตอนนี้</div>';
+  $("#DisplayConfirmGift").html(str);
+  document.getElementById('id05').style.display='block';
+  //alert("Get Rewards");
+}
+
+function GiftConfirm() {
+  NewDate();
+  $("#DisplayGift").html(cleararray);
+  document.getElementById('id05').style.display='none';
+  document.getElementById('loading').style.display='block';
+  dbGiftRewards.doc(Eid).update({
+    StatusSend : 2,
+    SendGift : dateString
+  });
+  var myTimeout = setTimeout(CheckData, 1000);
+}
+
+
+function random_item(items) {
+  return items[Math.floor(Math.random()*items.length)];   
+}
+
+
+function Opengift() {
+  document.getElementById('id03').style.display='block';
+}
+
+
+function Song1() {
+  CloseVDO();
+  var vid = document.getElementById("myaudio1");
+  vid.autoplay = true;
+  vid.load();
+  document.getElementById('id01').style.display='none';
+}
+
+
+function CloseVDO() {
+  var video1 = document.querySelector("#myaudio1");
+  video1.pause();
+  video1.currentTime = 0;
+}
+
+
+function OpenReload() {
+  location.href = "game.html";
+}
+
+function OpenRewards() {
+  location.href = "rewards.html";
+}
+
+function NewDate() {
+  var today = new Date();
+  var day = today.getDate() + "";
+  var month = (today.getMonth() + 1) + "";
+  var year = today.getFullYear() + "";
+  var hour = today.getHours() + "";
+  var minutes = today.getMinutes() + "";
+  var seconds = today.getSeconds() + "";
+  var ampm = hour >= 12 ? 'PM' : 'AM';
+  day = checkZero(day);
+  month = checkZero(month);
+  year = checkZero(year);
+  hour = checkZero(hour);
+  minutes = checkZero(minutes);
+  seconds = checkZero(seconds);
+  dateString = day + "/" + month + "/" + year + " " + hour + ":" + minutes + ":" + seconds +" "+ ampm;
+}
+
+
+function checkZero(data){
+  if(data.length == 1){
+    data = "0" + data;
+  }
+  return data;
+}
+
+
+function CloseAll() {
+  document.getElementById('id01').style.display='none';
+  document.getElementById('id02').style.display='none';
+  document.getElementById('id03').style.display='none';
+  document.getElementById('id04').style.display='none';
+  document.getElementById('id05').style.display='none';
+}
+
+

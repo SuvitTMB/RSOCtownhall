@@ -1,1 +1,127 @@
-var _0x4ed25d=_0x1403;(function(_0x4daf9c,_0x5bb19e){var _0x4106f7=_0x1403,_0x1491f7=_0x4daf9c();while(!![]){try{var _0x3e928c=-parseInt(_0x4106f7(0x132))/0x1*(-parseInt(_0x4106f7(0x153))/0x2)+-parseInt(_0x4106f7(0x12f))/0x3*(parseInt(_0x4106f7(0x155))/0x4)+parseInt(_0x4106f7(0x131))/0x5+parseInt(_0x4106f7(0x13b))/0x6+parseInt(_0x4106f7(0x134))/0x7*(-parseInt(_0x4106f7(0x14f))/0x8)+-parseInt(_0x4106f7(0x140))/0x9+-parseInt(_0x4106f7(0x11e))/0xa*(-parseInt(_0x4106f7(0x149))/0xb);if(_0x3e928c===_0x5bb19e)break;else _0x1491f7['push'](_0x1491f7['shift']());}catch(_0x151016){_0x1491f7['push'](_0x1491f7['shift']());}}}(_0x2b48,0xb9ac4));var dateString=new Date()[_0x4ed25d(0x14a)](_0x4ed25d(0x135),{'timeZone':_0x4ed25d(0x12e)}),xClickMenu='';$(document)['ready'](function(){var _0x4e6d9d=_0x4ed25d;sessionStorage[_0x4e6d9d(0x11d)](_0x4e6d9d(0x150))==null&&(location[_0x4e6d9d(0x147)]=_0x4e6d9d(0x145)),Connect_DB();});function _0x2b48(){var _0x132772=['https://file-upload-6f4fc.firebaseio.com','getItem','60mENMMC','giftname','orderBy','onerror','retailproject-6f4fc','1:653667385625:web:a5aed08500de80839f0588','</div></div>','All','LineName','\x22></div>','AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE','number','lfrtipB','collection','#ex-table','G-9SKTRHHSW9','Asia/Jakarta','66jshhNd','then','1366750VkYbIS','1257261joIrYR','./img/mom-rule.jpg','105yoRUPT','en-US','join','DataTable','data','EmpName','forEach','8827398sJOAvO','viewpage.html?gid=','asc','getMinutes','slice','11110230yFwnJs','</b>','destroy','retailproject-6f4fc.appspot.com','<div\x20style=\x22width:85%;float:\x20left;color:#777;padding-top:3px;\x22><b>','index.html','id01','href','#ex-table\x20tbody','722986IBeeYb','toLocaleString','getMonth','getFullYear','./img/box.jpg','none','629488ZyTDuu','EmpID_RSOC','<div\x20style=\x22width:15%;float:\x20left;\x22><img\x20src=\x22','src','2ywghyJ','game.html','40168xHzkQS','getDate','getHours','remove','giftcode','รายชื่อผู้ได้รับรางวัล','LinePicture'];_0x2b48=function(){return _0x132772;};return _0x2b48();}function Connect_DB(){var _0x2b238c=_0x4ed25d,_0xa217cf={'apiKey':_0x2b238c(0x128),'authDomain':'retailproject-6f4fc.firebaseapp.com','projectId':_0x2b238c(0x122),'databaseURL':_0x2b238c(0x11c),'storageBucket':_0x2b238c(0x143),'messagingSenderId':'653667385625','appId':_0x2b238c(0x123),'measurementId':_0x2b238c(0x12d)};firebase['initializeApp'](_0xa217cf),dbGiftRewards=firebase['firestore']()[_0x2b238c(0x12b)]('RSOCtownhall'),loadData();}function loadData(){var _0x1b65ab=_0x4ed25d,_0x3252e6=0x0,_0x159af8=0x0,_0x253a2f='',_0x1e21b9='',_0x3873c5=[];dbGiftRewards['where']('StatusSend','in',[0x1,0x2])[_0x1b65ab(0x120)](_0x1b65ab(0x119),_0x1b65ab(0x13d))['get']()[_0x1b65ab(0x130)](_0x47bda8=>{var _0xf5c607=_0x1b65ab;_0x47bda8[_0xf5c607(0x13a)](_0x331b0c=>{var _0x5e3881=_0xf5c607;_0x3252e6=_0x3252e6+0x1,_0x159af8++;var _0x2d73ba='';_0x2d73ba+='<div>',_0x2d73ba+=_0x5e3881(0x144)+_0x331b0c[_0x5e3881(0x138)]()[_0x5e3881(0x11f)]+_0x5e3881(0x141),_0x2d73ba+='<div\x20style=\x22font-size:13px;\x20font-weight:600;color:#0056ff;\x22>'+_0x331b0c['data']()[_0x5e3881(0x139)]+_0x5e3881(0x124),_0x2d73ba+=_0x5e3881(0x151)+_0x331b0c['data']()[_0x5e3881(0x11b)]+'\x22\x20onerror=\x22javascript:imgError(this)\x22\x20class=\x22chart-profilt\x22\x20title=\x22'+_0x331b0c[_0x5e3881(0x138)]()[_0x5e3881(0x126)]+_0x5e3881(0x127),_0x2d73ba+='</div><div\x20class=\x22clr\x22></div>',_0x1e21b9=[_0x2d73ba,_0x331b0c['data']()['giftname'],_0x331b0c['id'],_0x3252e6],_0x3873c5['push'](_0x1e21b9);}),dTable=$(_0xf5c607(0x12c))[_0xf5c607(0x137)]({'bDestroy':!![],'data':_0x3873c5,'columns':[{'title':_0xf5c607(0x11a)}],'dom':_0xf5c607(0x12a),'buttons':[],'lengthMenu':[[0x32,0x64,0xc8,-0x1],[0x32,0x64,0xc8,_0xf5c607(0x125)]],'columnDefs':[{'type':_0xf5c607(0x129),'targets':[0x0]}],'order':[[0x0,_0xf5c607(0x13d)]]});}),$(_0x1b65ab(0x12c))[_0x1b65ab(0x137)]()[_0x1b65ab(0x142)](),$(_0x1b65ab(0x148))[_0x1b65ab(0x118)]();}function ClickID(_0x3de506,_0x5c5b32){var _0x3a9e28=_0x4ed25d;location[_0x3a9e28(0x147)]=_0x3a9e28(0x13c)+_0x5c5b32+'';}function GotoHome(){var _0x2cc168=_0x4ed25d;location[_0x2cc168(0x147)]=_0x2cc168(0x154);}function _0x1403(_0x1afc59,_0x1186a2){var _0x2b485f=_0x2b48();return _0x1403=function(_0x140379,_0x1a16fe){_0x140379=_0x140379-0x118;var _0x4ae0b1=_0x2b485f[_0x140379];return _0x4ae0b1;},_0x1403(_0x1afc59,_0x1186a2);}function CloseAll(){var _0x4f6d14=_0x4ed25d;document['getElementById'](_0x4f6d14(0x146))['style']['display']=_0x4f6d14(0x14e);}function NewDate(){var _0x560370=_0x4ed25d,_0x3c64bf=new Date(),_0x35c232=_0x3c64bf[_0x560370(0x156)]()+'',_0x39d318=_0x3c64bf[_0x560370(0x14b)]()+0x1+'',_0x38f718=_0x3c64bf[_0x560370(0x14c)]()+'',_0x3ed116=_0x3c64bf[_0x560370(0x157)]()+'',_0x305472=_0x3c64bf[_0x560370(0x13e)]()+'',_0x4586f4=_0x3c64bf['getSeconds']()+'',_0x3593d3=_0x3ed116>=0xc?'PM':'AM';_0x35c232=checkZero(_0x35c232),_0x39d318=checkZero(_0x39d318),_0x38f718=checkZero(_0x38f718),_0x3ed116=checkZero(_0x3ed116),_0x305472=checkZero(_0x305472),_0x4586f4=checkZero(_0x4586f4),dateString=_0x35c232+'/'+_0x39d318+'/'+_0x38f718+'\x20'+_0x3ed116+':'+_0x305472+':'+_0x4586f4+'\x20'+_0x3593d3;}function ConvrtDate(_0x1d8fc1){var _0x485178=_0x4ed25d,_0x42570d=new Date(_0x1d8fc1),_0x5489ec=('0'+(_0x42570d[_0x485178(0x14b)]()+0x1))[_0x485178(0x13f)](-0x2),_0x47c6b4=('0'+_0x42570d[_0x485178(0x156)]())[_0x485178(0x13f)](-0x2);return[_0x47c6b4,_0x5489ec,_0x42570d[_0x485178(0x14c)]()+0x21f][_0x485178(0x136)]('/');}function checkZero(_0x5d4d26){return _0x5d4d26['length']==0x1&&(_0x5d4d26='0'+_0x5d4d26),_0x5d4d26;}function imgError(_0x3c4942){var _0x2d4eb0=_0x4ed25d;return _0x3c4942[_0x2d4eb0(0x121)]='',_0x3c4942[_0x2d4eb0(0x152)]=_0x2d4eb0(0x14d),!![];}function imgError1(_0x37a402){var _0x1837ed=_0x4ed25d;return _0x37a402[_0x1837ed(0x121)]='',_0x37a402['src']=_0x1837ed(0x133),!![];}
+var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
+var xClickMenu = "";
+
+
+$(document).ready(function () {
+  if(sessionStorage.getItem("EmpID_RSOC")==null) { location.href = "index.html"; }
+  Connect_DB();
+});
+
+
+function Connect_DB() {
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
+    authDomain: "retailproject-6f4fc.firebaseapp.com",
+    projectId: "retailproject-6f4fc",
+    databaseURL: "https://file-upload-6f4fc.firebaseio.com",
+    storageBucket: "retailproject-6f4fc.appspot.com",
+    messagingSenderId: "653667385625",
+    appId: "1:653667385625:web:a5aed08500de80839f0588",
+    measurementId: "G-9SKTRHHSW9"
+  };
+  firebase.initializeApp(firebaseConfig);
+  //dbGiftRewards = firebase.firestore().collection("Gift2023Rewards");
+  dbGiftRewards = firebase.firestore().collection("RSOCtownhall");
+  loadData();
+}
+
+
+function loadData() {
+  var i = 0;
+  var count = 0;
+  var xTopVote = "";
+  var dataSet = "";
+  var dataSrc = [];
+  dbGiftRewards
+  .where('StatusSend','in',[1,2])
+  .orderBy('giftcode','asc')
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      i = (i+1);
+      count++;
+      var xNewText = "";
+      xNewText += '<div>';
+      xNewText += '<div style="width:85%;float: left;color:#777;padding-top:3px;"><b>'+ doc.data().giftname +'</b> ['+ doc.data().StatusSend +']';
+      xNewText += '<div style="font-size:13px; font-weight:600;color:#0056ff;">'+ doc.data().EmpName +'</div></div>';
+      xNewText += '<div style="width:15%;float: left;"><img src="'+ doc.data().LinePicture +'" onerror="javascript:imgError(this)" class="chart-profilt" title="'+ doc.data().LineName +'"></div>';
+      xNewText += '</div><div class="clr"></div>';
+      dataSet = [xNewText, doc.data().giftname, doc.id, i];
+      dataSrc.push(dataSet);
+    }); 
+
+    dTable=$('#ex-table').DataTable({
+      "bDestroy": true,    
+      data: dataSrc,
+      columns: [
+        { title: "รายชื่อผู้ได้รับรางวัล" }
+        ],
+        dom: 'lfrtipB',
+        buttons: [
+            //'copy', 'excelFlash', 'excel', 'pdf', 'print'
+        ],
+          lengthMenu: [[50, 100, 200, -1], [50, 100, 200, "All"]],
+          columnDefs: [ { type: 'number', 'targets': [0] } ],
+          order: [[ 0, 'asc']]
+        //dom: 'Bfrtip', buttons: [ 'copy', 'csv', 'excel', 'pdf', 'print' ]
+      });   
+  });
+  $('#ex-table').DataTable().destroy();
+  $("#ex-table tbody").remove();
+}
+
+
+function ClickID(x,id) {
+  location.href = "viewpage.html?gid="+id+"";
+}
+
+function GotoHome() {
+  location.href = "game.html";
+}
+
+function CloseAll() {
+  document.getElementById('id01').style.display='none';
+}
+
+
+function NewDate() {
+  var today = new Date();
+  var day = today.getDate() + "";
+  var month = (today.getMonth() + 1) + "";
+  var year = today.getFullYear() + "";
+  var hour = today.getHours() + "";
+  var minutes = today.getMinutes() + "";
+  var seconds = today.getSeconds() + "";
+  var ampm = hour >= 12 ? 'PM' : 'AM';
+  day = checkZero(day);
+  month = checkZero(month);
+  year = checkZero(year);
+  hour = checkZero(hour);
+  minutes = checkZero(minutes);
+  seconds = checkZero(seconds);
+  dateString = day + "/" + month + "/" + year + " " + hour + ":" + minutes + ":" + seconds +" "+ ampm;
+}
+
+
+function ConvrtDate(str) {
+  var date = new Date(str),
+  mnth = ("0" + (date.getMonth() + 1)).slice(-2),
+  day = ("0" + date.getDate()).slice(-2);
+  return [day, mnth, date.getFullYear()+543].join("/");
+}
+
+
+function checkZero(data){
+  if(data.length == 1){
+    data = "0" + data;
+  }
+  return data;
+}
+
+
+function imgError(image) {
+    image.onerror = "";
+    image.src = "./img/box.png";
+    return true;
+}
+
+
